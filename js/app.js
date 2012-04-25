@@ -1,6 +1,6 @@
 var map, interactivity, layer;
 
-var url = "http://a.tiles.mapbox.com/v3/ggrube.";
+var url = "http://a.tiles.mapbox.com/v3/ggrube";
 var baselayer = "map-0jul22tp";
 var activelayer = "map-0jul22tp";
 var statelayer = "midwest-roads-and-rails";
