@@ -1,11 +1,11 @@
 var map, interactivity, layer;
 
-var url = 'http://api.tiles.mapbox.com/v3/';
-var baselayer = "mapbox.mapbox-streets";
-var activelayer = "occupy.4q11-delinq";
-var statelayer = "occupy.state-lines";
+var url = "http://a.tiles.mapbox.com/v3/ggrube.";
+var baselayer = "map-0jul22tp";
+var activelayer = "map-0jul22tp";
+var statelayer = "midwest-roads-and-rails";
 
-// Define a custom icon using the Maki museum icon
+ Define a custom icon using the Maki museum icon
 var museumIcon = L.Icon.extend({
   iconUrl: 'img/museum-24.png',
   shadowUrl: null,
@@ -15,7 +15,7 @@ var museumIcon = L.Icon.extend({
   popupAnchor: new L.Point(0,-24)
 });
 
-// Define a geojson data layer
+ Define a geojson data layer
   var geojsonLayer = new L.GeoJSON(data, {
   pointToLayer: function (latlng) {
     return new L.Marker(latlng, {
@@ -26,14 +26,14 @@ var museumIcon = L.Icon.extend({
 
 wax.tilejson(url + baselayer + ',' + activelayer + ',' + statelayer + '.jsonp', function(tilejson) {
   map = new L.Map('map')
-    .setView(new L.LatLng(39, -78), 4);
+    .setView(new L.LatLng(43, -90), 5);
 
   layer = new wax.leaf.connector(tilejson);
   map.addLayer(layer);
   map.addLayer(geojsonLayer);
 
-  tilejson.minzoom = 2;
-  tilejson.maxzoom = 7;
+  tilejson.minzoom = 5;
+  tilejson.maxzoom = 11;
 
   interactivity = wax.leaf.interaction()
     .map(map)
