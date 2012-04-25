@@ -1,9 +1,9 @@
 var map, interactivity, layer;
 
-var url = "http://a.tiles.mapbox.com/v3/ggrube";
-var baselayer = "map-0jul22tp";
-var activelayer = "map-0jul22tp";
-var statelayer = "midwest-roads-and-rails";
+var url = "http://a.tiles.mapbox.com/v3/";
+var baselayer = "ggrube.map-0jul22tp";
+var activelayer = "ggrube.map-0jul22tp";
+var statelayer = "ggrube.midwest-roads-and-rails";
 
  Define a custom icon using the Maki museum icon
 var museumIcon = L.Icon.extend({
