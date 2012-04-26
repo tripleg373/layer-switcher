@@ -49,19 +49,19 @@ wax.tilejson(url + baselayer + ',' + activelayer + ',' + statelayer + '.jsonp', 
   geojsonLayer.addGeoJSON(data);
 });
 
-function refreshMap(layers) {
-  wax.tilejson(url + layers + '.jsonp', function(tilejson) {
-    map.addLayer(new wax.leaf.connector(tilejson));
+//function refreshMap(layers) {
+ // wax.tilejson(url + layers + '.jsonp', function(tilejson) {
+    //map.addLayer(new wax.leaf.connector(tilejson));
 
     // This little dance to try to avoid a flash,
     // but Leaflet seems to flash anyway
-    var newlayer = new wax.leaf.connector(tilejson);
-    map.addLayer(newlayer);
-    map.removeLayer(layer);
-    layer = newlayer;
-    interactivity.tilejson(tilejson);
-  });
-}
+    //var newlayer = new wax.leaf.connector(tilejson);
+    //map.addLayer(newlayer);
+    //map.removeLayer(layer);
+    //layer = newlayer;
+    //interactivity.tilejson(tilejson);
+  //});
+//}
 
 $(document).ready(function () {
 
